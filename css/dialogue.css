@@ -1,0 +1,123 @@
+	/* Boite de dialogue
+================================================== */
+.dialogue_1 { 
+display: none;
+}
+.dialogue_1.active {
+display:block;
+position:fixed;
+top:0;
+bottom:0;
+right:0;
+left:0;
+padding:0;
+z-index:101; 
+background-color: rgba(100,100,100,.5);
+font-size:1em;
+}  
+.dialogue_1.active .dialogue_2 {
+position:relative;
+height:100%;
+width:100%;
+max-width:1000px;
+margin:0 auto;
+padding:0;
+}
+.dialogue_1.active .dialogue_3 {
+position:absolute;
+background-color: #ffffff;
+padding:1%;
+box-shadow:0 0 10px #ffffff;
+border-radius:10px;
+overflow-x:hidden;
+-webkit-animation-name: dialogue_1 ;
+-webkit-animation-duration: 0.3s;
+-webkit-animation-timing-function: ease;
+-webkit-animation-fill-mode: forwards;
+animation-name: dialogue_1 ;
+animation-duration: 0.3s;
+animation-timing-function: ease;
+animation-fill-mode: forwards;
+}
+.dialogue_3 p, .dialogue_3 a {
+color: #565656;
+text-shadow: none;
+}
+.dialogue_1.active .dialogue_3 div, .dialogue_1.active .dialogue_3 h2, .dialogue_1.active .dialogue_3 button, .dialogue_1.active .dialogue_3 ul, .dialogue_1.active .dialogue_3 p, .dialogue_1.active .dialogue_3 h3, .dialogue_1.active .dialogue_3 h1, .dialogue_1.active .dialogue_3 form, .dialogue_1.active .dialogue_3 table {
+-webkit-animation-name: dialogue_2 ;
+-webkit-animation-duration: 0.3s;
+-webkit-animation-timing-function: ease;
+-webkit-animation-fill-mode: forwards;
+animation-name: dialogue_2 ;
+animation-duration: 0.3s;
+animation-timing-function: ease;
+animation-fill-mode: forwards;
+}
+@-webkit-keyframes dialogue_1 {
+	0% {
+top:50%;
+bottom:50%;
+left:50%;
+right:50%;
+overflow-y:hidden;
+	}
+	50% {
+top:1%;
+bottom:1%;
+left:25%;
+right:25%;	
+overflow-y:hidden;	
+	}
+	100% {
+top:1%;
+bottom:1%;
+left:0;
+right:0;
+overflow-y:auto;
+	}
+}
+@keyframes dialogue_1 {
+	0% {
+top:50%;
+bottom:50%;
+left:50%;
+right:50%;
+overflow-y:hidden;
+	}
+	50% {
+top:1%;
+bottom:1%;
+left:25%;
+right:25%;	
+overflow-y:hidden;	
+	}
+	100% {
+top:1%;
+bottom:1%;
+left:0;
+right:0;
+overflow-y:auto;
+	}
+}
+@-webkit-keyframes dialogue_2 {
+	0% {
+opacity:0;
+	}
+	90% {
+opacity:0;
+	}
+	100% {
+opacity:1;
+	}
+}
+@keyframes dialogue_2 {
+	0% {
+opacity:0;
+	}
+	90% {
+opacity:0;
+	}
+	100% {
+opacity:1;
+	}
+}
