@@ -306,5 +306,5 @@ While ($donnees = $req->fetch()) {
 }
 $req->closeCursor();
 ?>
-<script>var cur_page = <?php echo $page; ?>, nb_par_page = <?php echo $nombreDeMessagesParPage; ?>, nombreDePages = <?php echo $nombreDePages; ?>,current_pays = <?php if (isset($current_pays) && count($current_pays) != 0) {echo json_encode($current_pays);} else {echo '[""]';} ?>,current_content = <?php if (isset($current_content) && count($current_content) != 0) {echo json_encode($current_content);} else {echo '[""]';} ?>,current_code = <?php echo '"'.$code.'"'; ?>,carte = <?php echo '"'.((isset($_GET['carte']) && $_GET['carte'] == 'on') ? 'on' : 'off').'"'; ?>;</script>
-<script src="./js/main_collec.js"></script>
+<script defer>var cur_page = <?php echo $page; ?>, nb_par_page = <?php echo $nombreDeMessagesParPage; ?>, nombreDePages = <?php echo $nombreDePages; ?>,current_pays = <?php if (isset($current_pays) && count($current_pays) != 0) {echo json_encode($current_pays);} else {echo '[""]';} ?>,current_content = <?php if (isset($current_content) && count($current_content) != 0) {echo json_encode($current_content);} else {echo '[""]';} ?>,current_code = <?php echo '"'.$code.'"'; ?>,carte = <?php echo '"'.((isset($_GET['carte']) && $_GET['carte'] == 'on') ? 'on' : 'off').'"'; ?>;</script>
+<script defer src="./js/main_collec.js"></script>

@@ -28,20 +28,25 @@
 <meta property="og:title" content="Site de Michel Dumont, philatéliste" />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="preview.jpg" />
+<meta name="theme-color" content="#1F615E">
 <!--<meta property="og:url" content="https://www.antoine-traductions.com" />
 <meta property="og:image" content="https://www.antoine-traductions.com/css/images/apercu.jpg" />
 <meta property="og:image:secure_url" content="https://www.antoine-traductions.com/css/images/apercu.jpg" />-->
 <link rel="icon" type="images/png" href="./css/images/favicon.png" />
-<script src='./js/jquery-1.7.1.js'></script>
-<script src="./js/jquery-ui.js"></script>
-<script src="./js/slimbox/js/slimbox2.js"></script>
-<script src="./js/ckeditor/ckeditor.js"></script>
-<script src="./js/jquery.sticky.js"></script>
-<script src="./js/jquery.magnify.js"></script>
-<script src="./js/swiper.min.js"></script>
-<script src="./js/jquery-jvectormap-2.0.3.min.js"></script>
-<script src="./js/jquery-jvectormap-world-mill.js"></script>
-<script>var id_page="<?php echo $id_page; ?>"; var id_item = "<?php echo ((isset($_GET['id']) && in_array($_GET['id'],array(1,2,3))) ? htmlspecialchars($_GET['id']) : '') ; ?>";</script>
-<script src="https://kit.fontawesome.com/63124842e5.js" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css?family=Caveat|Indie+Flower|Just+Another+Hand|Nothing+You+Could+Do|Open+Sans|Roboto" rel="stylesheet">
+<script defer src='./js/jquery-1.7.1.js'></script>
+<script defer src="./js/jquery-ui.js"></script>
+<script defer src="./js/slimbox/js/slimbox2.js"></script>
+<script defer src="./js/ckeditor/ckeditor.js" async></script>
+<script defer src="./js/jquery.sticky.js"></script>
+<script defer src="./js/jquery.magnify.js"></script>
+<script defer src="./js/swiper.min.js"></script>
+<script defer src="./js/jquery-jvectormap-2.0.3.min.js"></script>
+<script defer src="./js/jquery-jvectormap-world-mill.js"></script>
+<script defer>var id_page="<?php echo $id_page; ?>"; var id_item = "<?php echo ((isset($_GET['id']) && in_array($_GET['id'],array(1,2,3))) ? htmlspecialchars($_GET['id']) : '') ; ?>";</script>
+<script defer src="https://kit.fontawesome.com/63124842e5.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Caveat|Indie+Flower|Just+Another+Hand|Nothing+You+Could+Do|Open+Sans|Roboto&display=swap" rel="stylesheet">
+<link rel="manifest" href="/manifest.webmanifest">
 </head>
+<?php 
+    header('Cache-Control: max-age=31536000');
+?>

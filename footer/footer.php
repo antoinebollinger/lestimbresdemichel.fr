@@ -11,4 +11,4 @@
 		<a href="login.php"><p><i class="fas fa-user"></i>&nbsp;Espace PRO</p></a>
 	</div>
 </footer>
-<script src="./js/main.js"></script>
+<script defer src="./js/main.js"></script>

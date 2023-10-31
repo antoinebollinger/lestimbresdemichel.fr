@@ -57,8 +57,8 @@ if ($table != '') {
 			<div style="clear:both;"></div>
 		</div>
 <?php include('liens_directs.php'); ?>		
-		<script>var cur_table = "<?php echo $table; ?>";</script>
-		<script src="js/espace_pro.js"></script>		
+		<script defer>var cur_table = "<?php echo $table; ?>";</script>
+		<script defer src="js/espace_pro.js"></script>		
 	</body>
 </html>
 <?php } ?>

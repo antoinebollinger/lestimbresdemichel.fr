@@ -1,0 +1,23 @@
+{
+    "name": "Les timbres de Michel",
+    "short_name": "Les timbres de Michel",
+    "description": "Site de Michel Dumont, philatéliste. Découvrez ma collection de timbres et contactez-moi pour des renseignements et/ou échanges.",
+    "scope": "https://lestimbresdemichel.fr/",
+    "start_url": "https://lestimbresdemichel.fr",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#1F615E",
+    "icons": [
+        {
+            "src": "/favicon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon.ico",
+            "sizes": "any",
+            "type": "image/x-icon",
+            "purpose": "maskable"
+        }
+    ]
+}

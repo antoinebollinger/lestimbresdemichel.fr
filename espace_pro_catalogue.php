@@ -121,4 +121,4 @@ $req_table->closeCursor();
 <input type="hidden" id="page_input" name="page_pro" value="<?php echo $page; ?>" />
 <input type="hidden" id="nb_par_page_input" name="nb_par_page_pro" value="<?php echo $nombreDeMessagesParPage; ?>" />
 </form>
-<script>var cur_page = <?php echo $page; ?>, nb_par_page = <?php echo $nombreDeMessagesParPage; ?>, nombreDePages = <?php echo $nombreDePages; ?>;</script>		
+<script defer>var cur_page = <?php echo $page; ?>, nb_par_page = <?php echo $nombreDeMessagesParPage; ?>, nombreDePages = <?php echo $nombreDePages; ?>;</script>		

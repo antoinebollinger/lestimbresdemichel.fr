@@ -121,7 +121,7 @@ session_start();
 		</div>
 	</div>
 </div>
-<script>
+<script defer>
 <?php if ($false == 1) { ?>
 animate_css('#sublogin','shake');
 <?php } ?>

@@ -48,4 +48,4 @@ if (isset($_SESSION['list']) && count($_SESSION['list']['id']) > 0) {
 </div>
 <div style="clear:both;"></div>
 <div id="main_collec_results"></div>
-<script src="./js/main_liste.js"></script>
+<script defer src="./js/main_liste.js"></script>

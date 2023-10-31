@@ -5,12 +5,17 @@
 	src: url('font/hpSimplified/hp-simplified.ttf') format('truetype');
 	font-weight:normal;
 	font-style:normal;
+	font-display: swap;
 }
 @font-face {
 	font-family: 'HPSimplifiedLight';
 	src: url('font/hpSimplified/hp-simplified-light.ttf') format('truetype');
 	font-weight:normal;
 	font-style:normal;
+	font-display: swap;
+}
+* {
+	font-display: swap;
 }
 html, body {
 font-size: 100%;
@@ -269,7 +274,7 @@ nav li:hover:before {
 background-color: var(--secondary-1-0);	
 height: 5px;
 }
-nav li.active, nav li.active:hover {
+nav li.active a, nav li.active:hover a {
 color: var(--secondary-2-0);
 cursor:default;
 }
