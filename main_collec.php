@@ -143,11 +143,11 @@ echo ($result == '') ? '<p>Aucun filtre actif</p>' : '<div style="clear:both"><b
 </form>
 </div>
 <h4>Légende</h4>
-<!--
+
 	<p class="p_legende double">Dispoliste</p>
 	<p class="p_legende mancoliste">Mancoliste</p>
--->
-	<p class="p_legende present">Présent dans ma liste d'intérêt</p>
+
+	<p class="p_legende present">Dans ma liste d'intérêt</p>
 <h4>Lexique</h4>
 	<table>
 		<tr>
@@ -197,12 +197,14 @@ if ($nb_total > 0) {
 		}
 		$double_class = ($donnees['nbr'] - $donnees['nbr_my_collec'] >= 1) ? " double" : "";
 		$mancoliste_class = ($donnees['nbr'] - $donnees['nbr_my_collec'] < 0) ? " mancoliste" : "";
-		$disabled_class = ($donnees['nbr'] - $donnees['nbr_my_collec'] < 1) ? " disabled" : "";		
-		$photo_a = (file_exists('css/images/timbres/miniatures/'.$donnees['photo_a'])) ? $donnees['photo_a'] : 'zero.png' ;
+		$disabled_class = ($donnees['nbr'] - $donnees['nbr_my_collec'] < 1) ? " disabled" : "";
+		$photo_tmp = $donnees['photo_a'].(str_ends_with($donnees['photo_a'], '.jpg') ? "" : ".jpg");
+		$tmp = __DIR__ . '/css/images/timbres/miniatures/'.$photo_tmp;
+		$photo_a = (file_exists($tmp)) ? $photo_tmp : 'zero.png' ;
 		
 		echo '
 <div class="id_timbre'.$mancoliste_class.$double_class.$present_class.'" id="vigne_'.$donnees['id'].'">
-	<div class="id_timbre_img launch_swiper" style="background-image:url(\'css/images/timbres/miniatures/'.$photo_a.'\');" data-id="'.$id_slide.'"></div>
+	<div class="id_timbre_img launch_swiper" style="background-image:url(\'css/images/timbres/miniatures/'.$photo_a.'\');" data-id="'.$id_slide.'" data-tmp="'.$tmp.'"></div>
 	<div class="id_timbre_text">
 		<h4>'.$donnees['pays'].'</h4>
 		<p><b>'.$donnees['annee'].'</b></p>
